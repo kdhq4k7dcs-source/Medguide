@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    font-family: "Microsoft YaHei", "微软雅黑", "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", sans-serif;
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    font-weight: 500;
+  }
+}
+
+@theme {
+  --color-blue-50: #eff6ff;
+  --color-blue-100: #dbeafe;
+  --color-blue-200: #bfdbfe;
+  --color-blue-300: #93c5fd;
+  --color-blue-400: #60a5fa;
+  --color-blue-500: #3b82f6;
+  --color-blue-600: #2563eb;
+  --color-blue-700: #1d4ed8;
+  --color-blue-800: #1e40af;
+  --color-blue-900: #1e3a8a;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* Smooth animations */
+@keyframes bounce {
+  0%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-6px); }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Chat bubble styles */
+.chat-scroll {
+  scroll-behavior: smooth;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.3s ease-out;
+}
